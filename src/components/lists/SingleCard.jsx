@@ -26,7 +26,7 @@ let fetching =async ()=>{
     axios.get(`/api/listOne/${param.id}`)
     .then((res=>{
      setMydata(pre=> ({...pre,...res.data}))
-    //  console.log(mydata)
+     console.log(mydata)
     })).catch(
       (er)=>{
         console.log(er)

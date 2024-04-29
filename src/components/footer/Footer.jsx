@@ -5,8 +5,9 @@ import { NavLink } from 'react-router-dom';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import MailIcon from '@mui/icons-material/Mail';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-
+import ScrollIntoView from 'react-scroll-into-view';
 export default function Footer() {
+  let goToTOp
   return (
     <div className='bg-base-300' >
   <footer className="footer p-10  text-base-content">
@@ -19,9 +20,9 @@ export default function Footer() {
   </nav> 
   <nav>
     <h6 className="footer-title">Company</h6> 
-    <NavLink className={({isActive}) => isActive?"text-blue-500 font-bold":""} to="/">Home</NavLink>
-    <NavLink className={({isActive}) => isActive?"text-blue-500 font-bold":""} to="/about">About us</NavLink>
-    <NavLink className={({isActive}) => isActive?"text-blue-500 font-bold":""} to="/contact">Contact us</NavLink>
+   <ScrollIntoView selector="#footer"> <NavLink onClick={goToTOp}   className={({isActive}) => isActive?"text-blue-500 font-bold":""} to="/">Home</NavLink></ScrollIntoView>
+    <ScrollIntoView selector="#footer"> <NavLink onClick={goToTOp} className={({isActive}) => isActive?"text-blue-500 font-bold":""} to="/about">About us</NavLink></ScrollIntoView>
+    <ScrollIntoView selector="#footer"> <NavLink onClick={goToTOp} className={({isActive}) => isActive?"text-blue-500 font-bold":""} to="/contact">Contact us</NavLink></ScrollIntoView>
     <a className="link link-hover" href='https://github.com/muskanbharti08'>projects</a>
     
   </nav> 

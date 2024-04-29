@@ -7,7 +7,7 @@ import { ThemeProvider } from 'styled-components';
 const steps = [
   {
       id: '0',
-      message: 'Hey User!!',
+      message: 'Hello who are you??',
 
       // This calls the next id
       // i.e. id 1 in this case
@@ -17,7 +17,7 @@ const steps = [
 
       // This message appears in
       // the bot chat bubble
-      message: 'Please write your username',
+      message: "what's your goodName",
       trigger: '2'
   }, {
       id: '2',

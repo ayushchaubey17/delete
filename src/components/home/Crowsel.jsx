@@ -1,38 +1,30 @@
 import React from 'react'
+let url1 = "https://images.pexels.com/photos/4819658/pexels-photo-4819658.jpeg?auto=compress&cs=tinysrgb&w=800";
 
+let url2 = "https://images.pexels.com/photos/5997993/pexels-photo-5997993.jpeg?auto=compress&cs=tinysrgb&w=800";
+let url3 = "https://images.pexels.com/photos/7031414/pexels-photo-7031414.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load" ;
+let url4 = "https://images.pexels.com/photos/7031404/pexels-photo-7031404.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load" ;
 export default function Crowsel() {
   return (
     <div>
-      <div className="carousel w-full h-96 z-30">
-  <div id="slide1" className="carousel-item relative w-full ">
-    <img src="https://images.pexels.com/photos/4819658/pexels-photo-4819658.jpeg?auto=compress&cs=tinysrgb&w=800" className="w-full" />
-    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-      <a href="#slide4" className="btn btn-circle">❮</a> 
-      <a href="#slide2" className="btn btn-circle">❯</a>
-    </div>
+       <p className="   text-center  font-bold text-red-900">The Most Attractive Website I provide you</p>
+
+      <div className="carousel w-full sm:h-96">
+  <div id="item1 " className="carousel-item w-full">
+    <img src={url1} className="w-full " />
+     </div> 
+  <div id="item2" className="carousel-item w-full">
+    <img src={url2} className="w-full" />
   </div> 
-  <div id="slide2" className="carousel-item relative w-full">
-    <img src="https://images.pexels.com/photos/5997993/pexels-photo-5997993.jpeg?auto=compress&cs=tinysrgb&w=800" className="w-full" />
-    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-      <a href="#slide1" className="btn btn-circle">❮</a> 
-      <a href="#slide3" className="btn btn-circle">❯</a>
-    </div>
+  <div id="item3" className="carousel-item w-full">
+    <img src={url3} className="w-full" />
   </div> 
-  <div id="slide3" className="carousel-item relative w-full">
-    <img src="https://images.pexels.com/photos/7031414/pexels-photo-7031414.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load" className="w-full " />
-    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-      <a href="#slide2" className="btn btn-circle">❮</a> 
-      <a href="#slide4" className="btn btn-circle">❯</a>
-    </div>
-  </div> 
-  <div id="slide4" className="carousel-item relative w-full">
-    <img src="https://images.pexels.com/photos/7031404/pexels-photo-7031404.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load" className="w-full" />
-    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-      <a href="#slide3" className="btn btn-circle">❮</a> 
-      <a href="#slide1" className="btn btn-circle">❯</a>
-    </div>
+  <div id="item4" className="carousel-item w-full">
+    <img src={url4} className="w-full" />
   </div>
-</div>
-    </div>
+</div> 
+
+      
+       </div>
   )
 }
