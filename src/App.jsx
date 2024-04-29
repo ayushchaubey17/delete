@@ -19,12 +19,16 @@ import Slide1 from "./components/card/Slide1";
 import Wishlist from "./components/wishlist/Wishlist";
 import Book from "./components/payDate/Book";
 import Review from "./components/review/Review";
+import Forgot from "./components/forgot/Forgot";
+import CreateListing from "./components/createlisting/CreateListing";
+import ShowListing from "./components/createlisting/ShowListing";
+
 
 function App() {
   let [islogin, setLogin] = useState(false);
   return (
     <>
-      <HashRouter>
+  
         <div id="footer"></div>
         <Header islogin={islogin} setLogin={setLogin} />
 
@@ -49,6 +53,10 @@ function App() {
           <Route path="/mycart" element={<Slide1 />} />
           <Route path="/date" element={<Book />} />
           <Route path="/review" element={<Review />} />
+          <Route path="/forgot" element={<Forgot/>} />
+          <Route path="/createlist/:id" element={<CreateListing/>} />
+          <Route path="/showlist" element={<ShowListing/>} />
+          <Route path="*" element={<Home/>} />
 
         </Routes>
 
@@ -58,7 +66,7 @@ function App() {
             <ArrowUpwardIcon />
           </button>
         </ScrollIntoView>
-      </HashRouter>
+      
     </>
   );
 }

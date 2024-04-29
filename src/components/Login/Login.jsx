@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
+import { NavLink } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
 
 
 export default function Login() {
-    const notify = () => toast("Login success!!");
+    const notify = () => toast("Login form submitted!!");
     const notify1 = () => toast("Login to stayHomely  ");
 
     let [email,setEmail]= useState("");
@@ -45,7 +46,7 @@ let handlePwd = event =>{
           </label>
           <input type="password" placeholder="password" onChange={handlePwd} name='pwd' value={pwd} className="input input-bordered" required />
           <label className="label">
-            <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+            <NavLink to="/forgot" className="label-text-alt link link-hover">Forgot password?</NavLink>
           </label>
         </div>
         <div className="form-control mt-6">
